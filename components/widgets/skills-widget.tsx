@@ -3,24 +3,53 @@ import { Badge } from "@/components/ui/badge"
 import { Code2 } from "lucide-react"
 
 export function SkillsWidget() {
-  const technicalSkills = [
-    "React",
+  const favoriteTechnologies = [
     "Next.js",
     "TypeScript",
-    "Node.js",
+    "Shadcn",
+    "Tailwind",
     "Python",
-    "TailwindCSS",
-    "PostgreSQL",
-    "AWS",
+    "Flask",
+    "Cursor",
+    "Claude",
+    "Pandas",
+    "Postgres",
+    "Supabase",
+    "Vercel",
+    "ShipStation",
   ]
 
-  const professionalSkills = [
-    "Tax Preparation",
+  const financialServices = [
+    "Personal Returns",
+    "Business Returns",
+    "Capital Gains Analysis",
     "Tax Planning",
-    "IRS Representation",
-    "Financial Analysis",
-    "Compliance",
-    "Client Advisory",
+    "Portfolio Construction",
+    "Health Savings Accounts (HSAs)",
+    "Insurance Planning",
+    "Individual Retirement Accounts (IRAs)",
+    "Roth Conversions",
+    "Investment Analysis",
+    "Accounting Design",
+    "Bookkeeping Automation",
+    "1031 Exchanges",
+    "Retirement Planning",
+  ]
+
+  const hobbies = [
+    "Reading",
+    "Weightlifting",
+    "Walking",
+    "Travel",
+    "Speaking Spanish",
+    "Biblical Studies",
+    "Trivia",
+    "History",
+    "Investing",
+    "Anthropology",
+    "Economics",
+    "Fantasy Football",
+    "Fantasy Basketball",
   ]
 
   return (
@@ -34,10 +63,10 @@ export function SkillsWidget() {
       <CardContent className='space-y-6'>
         <div>
           <h3 className='text-sm font-semibold mb-3 text-muted-foreground'>
-            Technical
+            Favored Technologies and Tools
           </h3>
           <div className='flex flex-wrap gap-2'>
-            {technicalSkills.map((skill) => (
+            {favoriteTechnologies.map((skill) => (
               <Badge key={skill} variant='secondary' className='glass-widget'>
                 {skill}
               </Badge>
@@ -46,10 +75,22 @@ export function SkillsWidget() {
         </div>
         <div>
           <h3 className='text-sm font-semibold mb-3 text-muted-foreground'>
-            Professional
+            Financial and Tax Services
           </h3>
           <div className='flex flex-wrap gap-2'>
-            {professionalSkills.map((skill) => (
+            {financialServices.map((skill) => (
+              <Badge key={skill} variant='secondary' className='glass-widget'>
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className='text-sm font-semibold mb-3 text-muted-foreground'>
+            Hobbies and Interests
+          </h3>
+          <div className='flex flex-wrap gap-2'>
+            {hobbies.map((skill) => (
               <Badge key={skill} variant='secondary' className='glass-widget'>
                 {skill}
               </Badge>

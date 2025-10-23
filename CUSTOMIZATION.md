@@ -67,7 +67,13 @@ const socialLinks = [
 **Projects Widget** (`/components/widgets/projects-widget.tsx`):
 
 - Customize the `projects` array with your portfolio items
-- Add real links instead of "#"
+- Each project includes:
+  - `name`: Project title
+  - `description`: 2-3 sentence detailed description
+  - `url`: Live project link
+  - `image`: Project screenshot (recommended: 800x450px or 600x400px)
+  - `tags`: Array of technology badges
+- Add project images to `/public/images/` folder
 
 ### 4. Theme Colors
 

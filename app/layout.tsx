@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Austin Johnson - Software Engineer & IRS Enrolled Agent",
+  title: "Austin Johnson - AI Software Engineer & IRS Enrolled Agent",
   description:
-    "Portfolio of Austin Johnson - Full-stack developer and tax professional specializing in modern web technologies and financial solutions.",
+    "Portfolio of Austin Johnson - AI Software Engineer, IRS Enrolled Agent, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
 }
 
 export default function RootLayout({

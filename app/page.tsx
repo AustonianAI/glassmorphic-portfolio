@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/hero-section"
 import { AboutWidget } from "@/components/widgets/about-widget"
 import { SkillsWidget } from "@/components/widgets/skills-widget"
-import { ExperienceWidget } from "@/components/widgets/experience-widget"
 import { ProjectsWidget } from "@/components/widgets/projects-widget"
 import { ContactWidget } from "@/components/widgets/contact-widget"
 import { BackgroundVideo } from "@/components/background-video"
@@ -28,20 +27,15 @@ export default function Home() {
             <SkillsWidget />
           </div>
 
-          {/* Experience Widget - spans 2 columns */}
-          <div className='md:col-span-2'>
-            <ExperienceWidget />
-          </div>
-
           {/* Contact Widget */}
           <div>
             <ContactWidget />
           </div>
+        </div>
 
-          {/* Projects Widget - spans full width */}
-          <div className='md:col-span-2 lg:col-span-3'>
-            <ProjectsWidget />
-          </div>
+        {/* Featured Projects - Full Width */}
+        <div className='mt-6'>
+          <ProjectsWidget />
         </div>
 
         {/* Footer */}

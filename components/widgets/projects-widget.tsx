@@ -1,29 +1,77 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FolderGit2, ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 export function ProjectsWidget() {
   const projects = [
     {
-      name: "Tax Automation Platform",
+      name: "HatcheryBrain",
+      shortDescription: "Inventory management platform",
       description:
-        "Full-stack application for automating tax workflows and client management.",
-      tags: ["React", "Node.js", "PostgreSQL"],
-      link: "#",
+        "An API-first platform built for an industry leading partner in the sustainable agriculture sector.  This app plans a hatchery's product schedule, literally counting chickens for they hatch.  Inventory is communicated in real-time to a variety of wholesale and retail sales channales, and bookings are managed on a comprehensive platform.",
+      url: "https://apiv2.hatcherybrain.com/documentation",
+      image: "/images/hatcherybrain-cli.gif",
+      tags: [
+        "Nest.js",
+        "Heroku",
+        "PostgreSQL",
+        "AWS",
+        "ShipStation API",
+        "RESTful API",
+      ],
     },
     {
-      name: "Financial Dashboard",
+      name: "ChickensForBackyards.com",
+      shortDescription: "Next.js Headless Shopify App",
       description:
-        "Real-time analytics dashboard for financial data visualization.",
-      tags: ["Next.js", "TypeScript", "D3.js"],
-      link: "#",
+        "A modern headless Shopify app that utilizes Next.js to delivery a fully custom shopping experience.  By controlling all aspects of the UI/UX, driven by Shopify's powerful GraphQL API and content management system, this app demonstrates a highly niche specific e-commerce experience.",
+      url: "https://chickensforbackyards.com",
+      image: "/images/cfb_shopify.webp",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "GraphQL",
+        "Shopify",
+        "Shadcn",
+      ],
     },
     {
-      name: "IRS Form Generator",
+      name: "ShipStation Order Splitter",
+      shortDescription: "YouTube Demo of a Custom ShipStation App",
       description:
-        "Tool for programmatically generating and validating IRS tax forms.",
-      tags: ["Python", "PDF Generation", "API"],
-      link: "#",
+        "A demonstration of automatically splitting orders in ShipStation using a custom Node.js application and the ShipStation API.  This app shows how to use a custom app to solve a common feature request on a widely used order management platform.",
+      url: "https://www.youtube.com/watch?v=I-rpgSMXKuw",
+      image: "/images/shipstation-split.webp",
+      tags: ["Node.js", "Express", "ShipStation API", "Webhooks", "YouTube"],
+    },
+    {
+      name: "Jsonify",
+      shortDescription: "Early PDF to Structured Data Converter",
+      description:
+        "One of the earliest AI-powered tools for converting PDF documents into structured JSON data.  This was a proof of concept submitted in the Foundation Capital AI Hackathon in 2022 - showcasing an early example of prompt engineering and AI-powered data extraction.",
+      url: "https://jsonify.org",
+      image: "/images/jsonify.webp",
+      tags: ["OpenAI", "Next.js", "TypeScript", "Tailwind", "LLMs"],
+    },
+    {
+      name: "USPS API Tools",
+      shortDescription: "Python CLI Tool for the USPS API",
+      description:
+        "Python Flask application providing CLI tools for interacting with USPS APIs. Features include package tracking, shipping zone calculations, and Network Distribution Center (NDC) lookups.  This is a public app to demonstrate many of the API interactions that I've used with the USPS API to automation various logistics and reporting needs.",
+      url: "https://github.com/AustonianAI/usps-api-tools",
+      image: "/images/usps-cli.gif",
+      tags: ["Python", "Flask", "CLI", "USPS API"],
+    },
+    {
+      name: "LoL Keepers",
+      shortDescription: "Fantasy Football League Keeper Analytics",
+      description:
+        "Analytics platform for fantasy football leagues to evaluate keeper decisions for my fantasy football league (League of Legendds). Compares projected player values against keeper costs to help make data-driven roster decisions.  It features an sum of year's digits alogirthm to weight draft picks and determine a keeper's asset value.",
+      url: "https://lol-keepers.vercel.app",
+      image: "/images/lol-keepers.webp",
+      tags: ["Python", "Django", "Algorithms", "Fantasy Football"],
     },
   ]
 
@@ -35,29 +83,56 @@ export function ProjectsWidget() {
           Featured Projects
         </CardTitle>
       </CardHeader>
-      <CardContent className='space-y-4'>
+      <CardContent className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         {projects.map((project, index) => (
-          <div
+          <a
             key={index}
-            className='p-4 rounded-lg glass-widget transition-all duration-300 group cursor-pointer'
+            href={project.url}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='block rounded-lg glass-widget transition-all duration-300 group hover:scale-[1.02] overflow-hidden'
           >
-            <div className='flex items-start justify-between mb-2'>
-              <h3 className='font-semibold group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors'>
-                {project.name}
-              </h3>
-              <ExternalLink className='h-4 w-4 text-muted-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors' />
+            {/* Project Image */}
+            <div className='relative w-full h-64 overflow-hidden bg-muted'>
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className='object-cover object-top group-hover:scale-105 transition-transform duration-300'
+              />
             </div>
-            <p className='text-sm text-muted-foreground mb-3'>
-              {project.description}
-            </p>
-            <div className='flex flex-wrap gap-2'>
-              {project.tags.map((tag) => (
-                <Badge key={tag} variant='outline' className='text-xs'>
-                  {tag}
-                </Badge>
-              ))}
+
+            {/* Project Content */}
+            <div className='p-4'>
+              <div className='flex items-start justify-between mb-2'>
+                <h3 className='font-semibold text-lg group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors'>
+                  {project.name}
+                </h3>
+                <ExternalLink className='h-5 w-5 text-muted-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors flex-shrink-0 mt-1' />
+              </div>
+
+              <p className='text-sm text-muted-foreground mb-3 leading-relaxed'>
+                {project.description}
+              </p>
+
+              {/* Technology Tags */}
+              <div className='flex flex-wrap gap-2 mb-2'>
+                {project.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant='secondary'
+                    className='text-xs glass-widget'
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+
+              <p className='text-xs text-muted-foreground font-mono mt-2'>
+                {project.url.replace("https://", "").replace("www.", "")}
+              </p>
             </div>
-          </div>
+          </a>
         ))}
       </CardContent>
     </Card>

@@ -66,23 +66,34 @@ export function HeroSection() {
             <h1 className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent'>
               Austin Johnson
             </h1>
-            <div className='flex flex-wrap gap-3 justify-center md:justify-start mb-4'>
+            <div className='flex flex-wrap gap-2 justify-center md:justify-start mb-4'>
               <Badge
                 variant='secondary'
-                className='text-sm md:text-base px-4 py-2 glass-widget'
+                className='text-xs md:text-sm px-3 py-1 glass-widget'
               >
-                💻 Software Engineer
+                AI Software Engineer
               </Badge>
               <Badge
                 variant='secondary'
-                className='text-sm md:text-base px-4 py-2 glass-widget'
+                className='text-xs md:text-sm px-3 py-1 glass-widget'
               >
-                📊 IRS Enrolled Agent
+                IRS Enrolled Agent
+              </Badge>
+              <Badge
+                variant='secondary'
+                className='text-xs md:text-sm px-3 py-1 glass-widget'
+              >
+                Wedding Officiant
+              </Badge>
+              <Badge
+                variant='secondary'
+                className='text-xs md:text-sm px-3 py-1 glass-widget'
+              >
+                AgTech Entrepreneur
               </Badge>
             </div>
-            <p className='mt-4 text-muted-foreground text-lg max-w-2xl mb-6'>
-              Building innovative solutions at the intersection of technology
-              and finance
+            <p className='mt-4 text-muted-foreground text-lg md:text-xl max-w-2xl mb-6 font-medium'>
+              Entrepreneur, Technologist, and Relentless Simplifier
             </p>
 
             {/* Social Links */}
