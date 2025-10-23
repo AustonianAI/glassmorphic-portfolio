@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import fs from "fs"
 import path from "path"
 
+// This API route is used to fetch the list of wallpapers from the public/wallpapers directory
+
 export async function GET() {
   try {
     const wallpapersDir = path.join(process.cwd(), "public", "wallpapers")

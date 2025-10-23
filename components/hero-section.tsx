@@ -1,9 +1,43 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "./theme-toggle"
 import Image from "next/image"
+import { Github, Linkedin, Instagram } from "lucide-react"
 
 export function HeroSection() {
+  const socialLinks = [
+    {
+      name: "X (Twitter)",
+      url: "https://x.com/AustinAI",
+      icon: (
+        <svg
+          viewBox='0 0 24 24'
+          className='h-5 w-5'
+          fill='currentColor'
+          aria-hidden='true'
+        >
+          <path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z' />
+        </svg>
+      ),
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/AustonianAI",
+      icon: <Github className='h-5 w-5' />,
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/austinai/",
+      icon: <Linkedin className='h-5 w-5' />,
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/aj_builds_ai/",
+      icon: <Instagram className='h-5 w-5' />,
+    },
+  ]
+
   return (
     <div className='relative w-full mb-8'>
       {/* Theme Toggle in top-right */}
@@ -32,7 +66,7 @@ export function HeroSection() {
             <h1 className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent'>
               Austin Johnson
             </h1>
-            <div className='flex flex-wrap gap-3 justify-center md:justify-start'>
+            <div className='flex flex-wrap gap-3 justify-center md:justify-start mb-4'>
               <Badge
                 variant='secondary'
                 className='text-sm md:text-base px-4 py-2 glass-widget'
@@ -46,10 +80,32 @@ export function HeroSection() {
                 📊 IRS Enrolled Agent
               </Badge>
             </div>
-            <p className='mt-4 text-muted-foreground text-lg max-w-2xl'>
+            <p className='mt-4 text-muted-foreground text-lg max-w-2xl mb-6'>
               Building innovative solutions at the intersection of technology
               and finance
             </p>
+
+            {/* Social Links */}
+            <div className='flex gap-3 justify-center md:justify-start'>
+              {socialLinks.map((social) => (
+                <Button
+                  key={social.name}
+                  variant='outline'
+                  size='icon'
+                  className='glass-widget hover:scale-110 transition-transform'
+                  asChild
+                >
+                  <a
+                    href={social.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label={social.name}
+                  >
+                    {social.icon}
+                  </a>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </Card>

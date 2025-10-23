@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Github, Linkedin, Send } from "lucide-react"
+import { Mail, Send } from "lucide-react"
 
 export function ContactWidget() {
   return (
@@ -14,46 +14,16 @@ export function ContactWidget() {
         </CardTitle>
       </CardHeader>
       <CardContent className='space-y-4'>
-        {/* Social Links */}
-        <div className='flex gap-3 mb-4'>
+        {/* Email Link */}
+        <div className='mb-4'>
           <Button
             variant='outline'
-            size='icon'
-            className='glass-widget'
+            className='glass-widget w-full justify-start'
             asChild
           >
-            <a href='mailto:contact@austinjohnson.me' aria-label='Email'>
-              <Mail className='h-4 w-4' />
-            </a>
-          </Button>
-          <Button
-            variant='outline'
-            size='icon'
-            className='glass-widget'
-            asChild
-          >
-            <a
-              href='https://github.com'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='GitHub'
-            >
-              <Github className='h-4 w-4' />
-            </a>
-          </Button>
-          <Button
-            variant='outline'
-            size='icon'
-            className='glass-widget'
-            asChild
-          >
-            <a
-              href='https://linkedin.com'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='LinkedIn'
-            >
-              <Linkedin className='h-4 w-4' />
+            <a href='mailto:contact@austinjohnson.me'>
+              <Mail className='h-4 w-4 mr-2' />
+              contact@austinjohnson.me
             </a>
           </Button>
         </div>

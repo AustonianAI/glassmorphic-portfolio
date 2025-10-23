@@ -26,12 +26,28 @@ Update your profile photo in `/public/photos/`:
 
 ### 2. Social Links
 
-Update in `/components/widgets/contact-widget.tsx`:
+Update in `/components/hero-section.tsx`:
 
 ```tsx
-<a href="mailto:your-email@example.com">
-<a href="https://github.com/yourusername">
-<a href="https://linkedin.com/in/yourprofile">
+const socialLinks = [
+  {
+    name: "X (Twitter)",
+    url: "https://x.com/YourHandle",
+    icon: /* X icon SVG */
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/yourusername",
+    icon: <Github className="h-5 w-5" />,
+  },
+  // Add or remove social links as needed
+]
+```
+
+**Email:** Update in `/components/widgets/contact-widget.tsx`:
+
+```tsx
+<a href='mailto:your-email@example.com'>
 ```
 
 ### 3. Personal Information
