@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "./theme-toggle"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -15,9 +16,14 @@ export function HeroSection() {
           {/* Profile Photo */}
           <div className='relative'>
             <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-white/20 dark:ring-white/10 shadow-xl'>
-              <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-5xl md:text-6xl font-bold'>
-                AJ
-              </div>
+              <Image
+                src='/photos/austin_johnson_profile.jpg'
+                alt='Austin Johnson'
+                width={160}
+                height={160}
+                className='w-full h-full object-cover'
+                priority
+              />
             </div>
           </div>
 

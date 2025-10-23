@@ -6,22 +6,23 @@ Quick reference for personalizing your portfolio dashboard.
 
 ### 1. Profile Photo
 
-Replace the placeholder initials in `/components/hero-section.tsx`:
+Update your profile photo in `/public/photos/`:
+
+1. Replace `/public/photos/austin_johnson_profile.jpg` with your own photo
+2. Or update the path in `/components/hero-section.tsx`:
 
 ```tsx
-// Current: Gradient with initials
-<div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-5xl md:text-6xl font-bold">
-  AJ
-</div>
-
-// Replace with image:
 <Image
-  src="/profile.jpg"
-  alt="Austin Johnson"
-  fill
-  className="object-cover"
+  src='/photos/your-photo.jpg'
+  alt='Your Name'
+  width={160}
+  height={160}
+  className='w-full h-full object-cover'
+  priority
 />
 ```
+
+**Tip:** Use a square photo (1:1 aspect ratio) for best results in the circular frame.
 
 ### 2. Social Links
 
