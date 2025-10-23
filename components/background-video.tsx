@@ -7,7 +7,7 @@ export function BackgroundVideo() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
-  const playbackRate = 0.5
+  const playbackRate = 0.4
 
   // Fetch available wallpapers and select one randomly
   useEffect(() => {
@@ -51,25 +51,19 @@ export function BackgroundVideo() {
   }
 
   return (
-    <>
-      {/* Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        key={selectedVideo}
-        className='fixed top-0 left-0 w-full h-full object-cover -z-10'
-        onLoadedMetadata={handleVideoLoad}
-        onCanPlay={handleVideoLoad}
-        onPlay={handleVideoLoad}
-      >
-        <source src={selectedVideo} type='video/mp4' />
-      </video>
-
-      {/* Overlay for better text readability */}
-      <div className='fixed top-0 left-0 w-full h-full -z-10 bg-black/20 dark:bg-black/40' />
-    </>
+    <video
+      ref={videoRef}
+      autoPlay
+      loop
+      muted
+      playsInline
+      key={selectedVideo}
+      className='fixed top-0 left-0 w-full h-full object-cover -z-10'
+      onLoadedMetadata={handleVideoLoad}
+      onCanPlay={handleVideoLoad}
+      onPlay={handleVideoLoad}
+    >
+      <source src={selectedVideo} type='video/mp4' />
+    </video>
   )
 }

@@ -113,7 +113,8 @@ The site **automatically discovers and randomly selects** from video files in th
 Edit `/components/background-video.tsx`:
 
 - **Playback speed**: Change `playbackRate` value (0.5 = 50% speed, 1.0 = normal)
-- **Overlay darkness**: Adjust `bg-black/20 dark:bg-black/40` values
+
+Note: Videos play at full brightness. Widget readability is maintained through glassmorphism effects.
 
 ## 📝 Available Scripts
 

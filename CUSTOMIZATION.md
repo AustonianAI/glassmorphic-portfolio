@@ -86,12 +86,7 @@ Just drop video files into `/public/wallpapers/` - no code changes needed!
 const playbackRate = 0.5 // 0.5 = 50% speed, 1.0 = normal
 ```
 
-**Adjust overlay darkness** in `/components/background-video.tsx`:
-
-```tsx
-<div className='fixed ... bg-black/20 dark:bg-black/40' />
-//                        ↑ light     ↑ dark
-```
+This applies to ALL videos automatically.
 
 **Use a specific video** (disable random):
 
