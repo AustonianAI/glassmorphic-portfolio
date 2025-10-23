@@ -7,7 +7,7 @@ export function BackgroundVideo() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
-  const playbackRate = 0.4
+  const playbackRate = 0.6
 
   // Fetch available wallpapers and select one randomly
   useEffect(() => {
