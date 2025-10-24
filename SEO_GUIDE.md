@@ -117,28 +117,17 @@ Your portfolio now has comprehensive SEO optimization! Here's what was added:
 
 ### 1. Create a Custom OG Image
 
-**Current:** Using your profile photo  
-**Recommended:** Create a 1200x630px branded image
+**Status:** ✅ **COMPLETED** - Custom OG image added at `/public/og-image.jpg`
 
-**Tools to create OG images:**
+The metadata has been updated to use your custom OG image instead of the profile photo. This will provide better branding when your site is shared on social media.
 
-- [Canva](https://canva.com) - Free templates
-- [Figma](https://figma.com) - Design tool
-- [OG Image Generator](https://og-image.vercel.app/) - Quick generator
+**Image specifications:**
 
-**Recommended design:**
+- Size: 1200x630px (optimal for all platforms)
+- Location: `/public/og-image.jpg`
+- Used for: Facebook, LinkedIn, Twitter/X, Discord, Slack, etc.
 
-```
-┌─────────────────────────────────────┐
-│  Austin Johnson                     │
-│  AI Software Engineer               │
-│  IRS Enrolled Agent                 │
-│                                     │
-│  [Your Photo]  AustinJohnson.me    │
-└─────────────────────────────────────┘
-```
-
-Once created, save as `/public/og-image.jpg` and update in `app/layout.tsx`:
+**Already configured in `app/layout.tsx`:**
 
 ```typescript
 images: [
@@ -146,7 +135,7 @@ images: [
     url: "/og-image.jpg",
     width: 1200,
     height: 630,
-    alt: "Austin Johnson Portfolio",
+    alt: "Austin Johnson - AI Software Engineer & Enrolled Agent",
   },
 ],
 ```

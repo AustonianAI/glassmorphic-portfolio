@@ -176,7 +176,7 @@ The site includes comprehensive SEO optimization:
 - Open Graph tags for Facebook, LinkedIn, Slack
 - Twitter Card tags for rich previews on X/Twitter
 - Customizable meta descriptions and keywords
-- Social share image configuration
+- Custom OG image (1200x630px) configured
 
 **Structured Data (JSON-LD):**
 
@@ -238,7 +238,7 @@ MIT
 **Austin Johnson**
 
 - Software Engineer
-- IRS Enrolled Agent
+- Enrolled Agent
 - Website: [austinjohnson.me](https://austinjohnson.me)
 
 ---

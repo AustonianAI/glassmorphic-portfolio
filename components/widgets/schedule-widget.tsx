@@ -15,8 +15,7 @@ export function ScheduleWidget() {
       </CardHeader>
       <CardContent className='space-y-4'>
         <p className='text-sm text-muted-foreground'>
-          Let&apos;s discuss your project, business needs, or explore how we can
-          work together.
+          Have tax questions, or just want a new connection? Let&apos;s chat!
         </p>
 
         {/* Call Types */}
@@ -26,7 +25,7 @@ export function ScheduleWidget() {
             <div>
               <p className='font-medium'>Virtual Meeting</p>
               <p className='text-xs text-muted-foreground'>
-                30-60 minute video call
+                20 minute video call
               </p>
             </div>
           </div>

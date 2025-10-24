@@ -17,15 +17,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://austinjohnson.me"),
   title: {
-    default: "Austin Johnson - AI Software Engineer & IRS Enrolled Agent",
+    default: "Austin Johnson - AI Software Engineer & Enrolled Agent",
     template: "%s | Austin Johnson",
   },
   description:
-    "Portfolio of Austin Johnson - AI Software Engineer, IRS Enrolled Agent, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
+    "Portfolio of Austin Johnson - AI Software Engineer, Enrolled Agent licensed to practice before the IRS, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
   keywords: [
     "Austin Johnson",
     "AI Software Engineer",
-    "IRS Enrolled Agent",
+    "Enrolled Agent",
     "Tax Professional",
     "AgTech Entrepreneur",
     "Software Developer",
@@ -50,25 +50,25 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://austinjohnson.me",
     siteName: "Austin Johnson Portfolio",
-    title: "Austin Johnson - AI Software Engineer & IRS Enrolled Agent",
+    title: "Austin Johnson - AI Software Engineer & Enrolled Agent",
     description:
-      "Portfolio of Austin Johnson - AI Software Engineer, IRS Enrolled Agent, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
+      "Portfolio of Austin Johnson - AI Software Engineer, Enrolled Agent licensed to practice before the IRS, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
     images: [
       {
-        url: "/photos/austin_johnson_profile.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Austin Johnson - AI Software Engineer & IRS Enrolled Agent",
+        alt: "Austin Johnson - AI Software Engineer & Enrolled Agent",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Austin Johnson - AI Software Engineer & IRS Enrolled Agent",
+    title: "Austin Johnson - AI Software Engineer & Enrolled Agent",
     description:
-      "Portfolio of Austin Johnson - AI Software Engineer, IRS Enrolled Agent, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
+      "Portfolio of Austin Johnson - AI Software Engineer, Enrolled Agent licensed to practice before the IRS, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
     creator: "@AustinAI",
-    images: ["/photos/austin_johnson_profile.jpg"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

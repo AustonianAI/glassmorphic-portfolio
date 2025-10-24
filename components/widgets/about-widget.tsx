@@ -14,9 +14,9 @@ export function AboutWidget() {
         <p className='text-muted-foreground leading-relaxed'>
           I&apos;m a technologist and finance professional based in Dallas, TX.
           With over two decades of entrepreneurial, small business, and
-          consulting experience, I&apos;ve helped countless teams unlock their
-          potential by understanding, automating - and most importantly -
-          simplifying how they create value.
+          consulting experience, I&apos;ve helped teams unlock their potential
+          by understanding, automating - and most importantly - simplifying how
+          they create value.
         </p>
         <p className='text-muted-foreground leading-relaxed'>
           After founding my first e-commerce company shortly after college, I
@@ -34,9 +34,10 @@ export function AboutWidget() {
         </p>
         <p className='text-muted-foreground leading-relaxed'>
           Now, as an Enrolled Agent licensed to practice before the IRS, I
-          combine my passion for technology and finance through AI-first
-          fractional CFO and tax advisory services — helping driven teams
-          achieve clarity and control over their financial performance.
+          combine my expertise in technology with a keep understanding of
+          finance through AI-first fractional CFO and tax advisory services —
+          helping driven teams achieve clarity and control over their financial
+          performance.
         </p>
         <p className='text-muted-foreground leading-relaxed'>
           A lifelong autodidact and avid traveler, I&apos;ve spent several years
