@@ -119,18 +119,30 @@ portfolio-aj/
 
 The site **automatically discovers and randomly selects** from video files in the `/public/wallpapers/` folder on each page load. No code changes needed!
 
+**Desktop vs Mobile:**
+
+- **Desktop (≥1024px)**: Shows random video background
+- **Mobile/Tablet (<1024px)**: Shows static image (`/public/bg-mobile.jpg`) for better performance
+
 **To add more videos:**
 
 1. Simply drop your video file (`.mp4`, `.webm`, `.ogg`, or `.mov`) into `/public/wallpapers/`
 2. That's it! The site will automatically include it in the random rotation
 
-**Supported formats:** MP4, WebM, OGG, MOV
+**To set mobile background:**
+
+1. Add your static background image to `/public/bg-mobile.jpg`
+2. Recommended size: 1080x1920px (portrait) or 1920x1080px (landscape)
+3. Use JPG format for smaller file size
+
+**Supported formats:** MP4, WebM, OGG, MOV (video), JPG/PNG (mobile background)
 
 **To adjust settings:**
 
 Edit `/components/background-video.tsx`:
 
-- **Playback speed**: Change `playbackRate` value (0.5 = 50% speed, 1.0 = normal)
+- **Playback speed**: Change `playbackRate` value (0.6 = 60% speed, 1.0 = normal)
+- **Mobile breakpoint**: Change `window.innerWidth < 1024` to different pixel value
 
 Note: Videos play at full brightness. Widget readability is maintained through glassmorphism effects.
 
