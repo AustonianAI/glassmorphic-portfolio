@@ -12,7 +12,7 @@ export function ProjectsWidget() {
       name: "HatcheryBrain",
       shortDescription: "Inventory management platform",
       description:
-        "An API-first platform built for an industry leading partner in the sustainable agriculture sector. This app plans a hatchery's product schedule, literally counting chickens before they hatch. Inventory is communicated in real-time to a variety of wholesale and retail sales channels, and bookings are managed on a comprehensive platform.",
+        "An API-first platform built for an industry leading partner in the sustainable agriculture sector. This app plans a hatchery's production schedule, literally counting chickens before they hatch. Inventory is communicated in real-time to a variety of wholesale and retail sales channels, and bookings are managed on a comprehensive platform.",
       url: "https://apiv2.hatcherybrain.com/documentation",
       image: "/images/hatcherybrain-cli.gif",
       tags: [
@@ -50,7 +50,7 @@ export function ProjectsWidget() {
       name: "USPS API Tools",
       shortDescription: "Python CLI Tool for the USPS API",
       description:
-        "Python Flask application providing CLI tools for interacting with USPS APIs. Features include package tracking, shipping zone calculations, and Network Distribution Center (NDC) lookups. This is a public app to demonstrate many of the API interactions that I've used with the USPS API to automate various logistics and reporting needs.",
+        "Python Flask application providing CLI tools for interacting with USPS APIs. Features include package tracking, shipping zone calculations, and Network Distribution Center (NDC) lookups. This is a public app to demonstrate many of the features I've used with the USPS API to automate various logistics and reporting needs.",
       url: "https://github.com/AustonianAI/usps-api-tools",
       image: "/images/usps-cli.gif",
       tags: ["Python", "Flask", "CLI", "USPS API"],
@@ -60,7 +60,7 @@ export function ProjectsWidget() {
       name: "ChickensForBackyards.com",
       shortDescription: "Next.js Headless Shopify App",
       description:
-        "A modern headless Shopify app that utilizes Next.js to deliver a fully custom shopping experience. By controlling all aspects of the UI/UX, driven by Shopify's powerful GraphQL API and content management system, this app demonstrates a highly niche specific e-commerce experience.",
+        "A modern headless Shopify app that utilizes Next.js to deliver a fully custom shopping experience. By controlling all aspects of the UI/UX, driven by Shopify's powerful GraphQL API and content management system, this app demonstrates a highly niched and nuanced e-commerce experience.",
       url: "https://chickensforbackyards.com",
       image: "/images/cfb_shopify.webp",
       tags: [
@@ -77,7 +77,7 @@ export function ProjectsWidget() {
       name: "LoL Keepers",
       shortDescription: "Fantasy Football League Keeper Analytics",
       description:
-        "Analytics platform for fantasy football leagues to evaluate keeper decisions for my fantasy football league (League of Legends). Compares projected player values against keeper costs to help make data-driven roster decisions. It features a sum of years' digits algorithm to weight draft picks and determine a keeper's asset value.",
+        "Analytics platform to evaluate keeper decisions for my fantasy football league (League of Legends). Compares projected player values against keeper costs to help make data-driven roster decisions. It features a sum of years' digits algorithm to weight draft picks and determine a keeper's asset value.",
       url: "https://lol-keepers.vercel.app",
       image: "/images/lol-keepers.webp",
       tags: ["Python", "Django", "Algorithms", "Fantasy Football"],

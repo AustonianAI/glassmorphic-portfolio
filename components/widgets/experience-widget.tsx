@@ -12,7 +12,7 @@ export function ExperienceWidget() {
       type: "tech",
     },
     {
-      title: "IRS Enrolled Agent",
+      title: "Enrolled Agent",
       company: "Tax Practice",
       period: "2018 - Present",
       description:

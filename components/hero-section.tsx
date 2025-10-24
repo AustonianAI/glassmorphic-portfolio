@@ -77,7 +77,7 @@ export function HeroSection() {
                 variant='secondary'
                 className='text-xs md:text-sm px-3 py-1 glass-widget'
               >
-                IRS Enrolled Agent
+                Enrolled Agent
               </Badge>
               <Badge
                 variant='secondary'

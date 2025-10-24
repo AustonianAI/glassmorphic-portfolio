@@ -5,13 +5,9 @@ export function StructuredData() {
     name: "Austin Johnson",
     url: "https://austinjohnson.me",
     image: "https://austinjohnson.me/photos/austin_johnson_profile.jpg",
-    jobTitle: [
-      "AI Software Engineer",
-      "IRS Enrolled Agent",
-      "AgTech Entrepreneur",
-    ],
+    jobTitle: ["AI Software Engineer", "Enrolled Agent", "AgTech Entrepreneur"],
     description:
-      "AI Software Engineer, IRS Enrolled Agent, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
+      "AI Software Engineer, Enrolled Agent licensed to practice before the IRS, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
     email: "contact@austinjohnson.me",
     sameAs: [
       "https://github.com/AustonianAI",
