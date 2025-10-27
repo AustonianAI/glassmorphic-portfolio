@@ -109,6 +109,7 @@ export function ProjectsWidget() {
                 alt={project.name}
                 fill
                 className='object-cover object-top group-hover:scale-105 transition-transform duration-300'
+                unoptimized={project.image.endsWith(".gif")}
               />
             </div>
 
