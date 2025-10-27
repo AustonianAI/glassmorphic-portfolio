@@ -5,7 +5,7 @@ A modern, Mac OS dashboard-style portfolio website built with Next.js, TypeScrip
 ## 🚀 Features
 
 - **Mac OS Dashboard Design**: Glassmorphism aesthetic with widget-based layout
-- **Video Background**: Stunning background video with glassmorphism overlay
+- **Static Background**: Beautiful background image with glassmorphism overlay
 - **Dark/Light Theme**: Beautiful theme switcher with system preference detection
 - **Responsive Layout**: Seamlessly adapts from mobile to desktop
 - **Modern Stack**: Built with Next.js 14, React, TypeScript, and Tailwind CSS
@@ -80,20 +80,30 @@ npm run dev
 ```
 portfolio-aj/
 ├── app/
+│   ├── api/
+│   │   └── send-email/     # Resend email API route
 │   ├── layout.tsx          # Root layout with theme provider
 │   ├── page.tsx            # Main dashboard page
+│   ├── sitemap.ts          # XML sitemap generation
 │   └── globals.css         # Global styles with glassmorphism
 ├── components/
 │   ├── hero-section.tsx    # Hero component with profile
+│   ├── structured-data.tsx # JSON-LD schemas
 │   ├── theme-provider.tsx  # Theme provider wrapper
 │   ├── theme-toggle.tsx    # Dark/light mode toggle
 │   ├── ui/                 # shadcn/ui components
 │   └── widgets/
 │       ├── about-widget.tsx
 │       ├── skills-widget.tsx
-│       ├── experience-widget.tsx
 │       ├── projects-widget.tsx
-│       └── contact-widget.tsx
+│       ├── contact-widget.tsx
+│       └── schedule-widget.tsx
+├── public/
+│   ├── bg-mobile.jpg       # Background image
+│   ├── favicon/            # Favicon files
+│   ├── images/             # Project screenshots
+│   ├── photos/             # Profile photos
+│   └── robots.txt          # Crawler instructions
 └── lib/
     └── utils.ts            # Utility functions
 ```
@@ -115,36 +125,27 @@ portfolio-aj/
 - Theme colors are managed via CSS variables (light/dark modes)
 - Responsive breakpoints follow Tailwind's default system
 
-### Background Video
+### Background Image
 
-The site **automatically discovers and randomly selects** from video files in the `/public/wallpapers/` folder on each page load. No code changes needed!
+The site uses a static background image for fast loading and optimal performance.
 
-**Desktop vs Mobile:**
+**To change the background:**
 
-- **Desktop (≥1024px)**: Shows random video background
-- **Mobile/Tablet (<1024px)**: Shows static image (`/public/bg-mobile.jpg`) for better performance
+1. Replace `/public/bg-mobile.jpg` with your desired image
+2. Recommended size: 1920x1080px or higher (landscape)
+3. Use JPG format for optimal file size/quality balance
+4. For portrait: 1080x1920px works well
 
-**To add more videos:**
+**Supported formats:** JPG, PNG, WebP
 
-1. Simply drop your video file (`.mp4`, `.webm`, `.ogg`, or `.mov`) into `/public/wallpapers/`
-2. That's it! The site will automatically include it in the random rotation
+**Image optimization tips:**
 
-**To set mobile background:**
+- Use high-quality images (1920x1080px minimum)
+- JPG at 85-90% quality provides best balance
+- WebP format offers better compression
+- Next.js automatically optimizes images on build
 
-1. Add your static background image to `/public/bg-mobile.jpg`
-2. Recommended size: 1080x1920px (portrait) or 1920x1080px (landscape)
-3. Use JPG format for smaller file size
-
-**Supported formats:** MP4, WebM, OGG, MOV (video), JPG/PNG (mobile background)
-
-**To adjust settings:**
-
-Edit `/components/background-video.tsx`:
-
-- **Playback speed**: Change `playbackRate` value (0.6 = 60% speed, 1.0 = normal)
-- **Mobile breakpoint**: Change `window.innerWidth < 1024` to different pixel value
-
-Note: Videos play at full brightness. Widget readability is maintained through glassmorphism effects.
+Note: Widget readability is maintained through glassmorphism effects regardless of background image.
 
 ### Contact Form
 
