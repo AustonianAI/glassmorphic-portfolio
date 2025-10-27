@@ -3,5 +3,5 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://austinjohnson.me/sitemap.xml
+Sitemap: https://www.austinjohnson.me/sitemap.xml
 

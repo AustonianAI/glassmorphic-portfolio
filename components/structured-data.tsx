@@ -3,8 +3,8 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Austin Johnson",
-    url: "https://austinjohnson.me",
-    image: "https://austinjohnson.me/photos/austin_johnson_profile.jpg",
+    url: "https://www.austinjohnson.me",
+    image: "https://www.austinjohnson.me/photos/austin_johnson_profile.jpg",
     jobTitle: ["AI Software Engineer", "Enrolled Agent", "AgTech Entrepreneur"],
     description:
       "AI Software Engineer, Enrolled Agent licensed to practice before the IRS, Wedding Officiant, and AgTech Entrepreneur specializing in innovative technology solutions.",
@@ -52,7 +52,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Austin Johnson Portfolio",
-    url: "https://austinjohnson.me",
+    url: "https://www.austinjohnson.me",
     description:
       "Professional portfolio showcasing AI software engineering, tax advisory services, and AgTech innovations.",
     author: {
@@ -65,7 +65,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Austin Johnson - Tax & CFO Services",
-    image: "https://austinjohnson.me/photos/austin_johnson_profile.jpg",
+    image: "https://www.austinjohnson.me/photos/austin_johnson_profile.jpg",
     description:
       "AI-first fractional CFO and tax advisory services helping driven teams achieve clarity and control over their financial performance.",
     priceRange: "$$",

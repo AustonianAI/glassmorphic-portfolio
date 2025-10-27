@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://austinjohnson.me"),
+  metadataBase: new URL("https://www.austinjohnson.me"),
   title: {
     default: "Austin Johnson - AI Software Engineer & Enrolled Agent",
     template: "%s | Austin Johnson",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "HatcheryBrain",
     "Dallas TX",
   ],
-  authors: [{ name: "Austin Johnson", url: "https://austinjohnson.me" }],
+  authors: [{ name: "Austin Johnson", url: "https://www.austinjohnson.me" }],
   creator: "Austin Johnson",
   publisher: "Austin Johnson",
   formatDetection: {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://austinjohnson.me",
+    url: "https://www.austinjohnson.me",
     siteName: "Austin Johnson Portfolio",
     title: "Austin Johnson - AI Software Engineer & Enrolled Agent",
     description:
