@@ -24,13 +24,15 @@ export async function POST(request: Request) {
       )
     }
 
+    // Debug log
+    console.log("Sending email with replyTo:", email)
+
     // Send email
     const data = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>", // You'll update this with your domain
-      to: "contact@austinjohnson.me",
+      from: "Austin Johnson <austin@austinjohnson.me>",
+      to: ["contact@austinjohnson.me"],
       replyTo: email,
       subject: `Portfolio Contact from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
         <h2>New Portfolio Contact</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -38,8 +40,10 @@ export async function POST(request: Request) {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, "<br>")}</p>
       `,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     })
 
+    console.log("Email sent successfully:", data)
     return NextResponse.json({ success: true, data }, { status: 200 })
   } catch (error) {
     console.error("Error sending email:", error)
