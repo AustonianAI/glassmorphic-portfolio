@@ -4,13 +4,22 @@ import { SkillsWidget } from "@/components/widgets/skills-widget"
 import { ProjectsWidget } from "@/components/widgets/projects-widget"
 import { ContactWidget } from "@/components/widgets/contact-widget"
 import { ScheduleWidget } from "@/components/widgets/schedule-widget"
-import { BackgroundVideo } from "@/components/background-video"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <main className='min-h-screen p-4 md:p-8 lg:p-12 relative'>
-      {/* Background Video */}
-      <BackgroundVideo />
+      {/* Background Image */}
+      <div className='fixed inset-0 -z-10'>
+        <Image
+          src='/bg-mobile.jpg'
+          alt='Background'
+          fill
+          className='object-cover'
+          priority
+          quality={90}
+        />
+      </div>
 
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Hero Section */}

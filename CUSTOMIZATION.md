@@ -93,35 +93,39 @@ Modify color variables in `/app/globals.css`:
 }
 ```
 
-### 5. Background Video (Automatic Discovery)
+### 5. Background Image
 
-The site **automatically scans** `/public/wallpapers/` and randomly selects a video on each page load.
+The site uses a static background image for optimal performance and fast loading.
 
-**Add more videos:**
+**Change the background:**
 
-Just drop video files into `/public/wallpapers/` - no code changes needed!
+Simply replace `/public/bg-mobile.jpg` with your desired image.
 
-**Supported formats:** `.mp4`, `.webm`, `.ogg`, `.mov`
+**Supported formats:** JPG, PNG, WebP
 
-**Adjust playback speed** in `/components/background-video.tsx`:
+**Recommended sizes:**
+
+- Landscape: 1920x1080px or higher
+- Portrait: 1080x1920px or higher
+
+**Optimization tips:**
+
+- Use JPG at 85-90% quality for best balance
+- WebP format offers better compression
+- Next.js automatically optimizes images during build
+
+**Change image in code** (`/app/page.tsx`):
 
 ```tsx
-const playbackRate = 0.5 // 0.5 = 50% speed, 1.0 = normal
+<Image
+  src='/your-background.jpg' // Update filename here
+  alt='Background'
+  fill
+  className='object-cover'
+  priority
+  quality={90}
+/>
 ```
-
-This applies to ALL videos automatically.
-
-**Use a specific video** (disable random):
-
-Comment out the API fetch and set directly:
-
-```tsx
-const [selectedVideo] = useState<string>("/wallpapers/aj_beach.mp4")
-```
-
-**Disable video completely:**
-
-Remove `<BackgroundVideo />` from `/app/page.tsx`.
 
 ## 🎨 Layout Adjustments
 
