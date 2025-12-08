@@ -1,259 +1,164 @@
-# Austin Johnson - Portfolio Dashboard
+<div align="center">
 
-A modern, Mac OS dashboard-style portfolio website built with Next.js, TypeScript, and shadcn/ui.
+# 👋 Hi, I'm Austin Johnson
 
-## 🚀 Features
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=AI+Software+Engineer;IRS+Licensed+Enrolled+Agent;Building+at+the+intersection+of+code+and+commerce" alt="Typing SVG" />
 
-- **Mac OS Dashboard Design**: Glassmorphism aesthetic with widget-based layout
-- **Static Background**: Beautiful background image with glassmorphism overlay
-- **Dark/Light Theme**: Beautiful theme switcher with system preference detection
-- **Responsive Layout**: Seamlessly adapts from mobile to desktop
-- **Modern Stack**: Built with Next.js 14, React, TypeScript, and Tailwind CSS
-- **shadcn/ui Components**: Beautiful, accessible components
-- **SEO Optimized**: Comprehensive metadata, Open Graph, Twitter Cards, and structured data
-- **Portfolio Sections**:
-  - Hero section with dual professional identities
-  - About widget
-  - Skills & expertise showcase
-  - Experience timeline
-  - Featured projects
-  - Contact form with email integration (Resend)
-  - Scheduling integration (Cal.com)
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom glassmorphism utilities
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **Theme Management**: next-themes
-- **Email Service**: Resend
-
-## 📦 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-
-```bash
-git clone <repository-url>
-cd portfolio-aj
-```
-
-2. Install dependencies
-
-```bash
-npm install
-```
-
-3. Set up environment variables
-
-Create a `.env.local` file in the root directory:
-
-```bash
-RESEND_API_KEY=re_your_api_key_here
-```
-
-**Get your Resend API key:**
-
-- Sign up at [resend.com](https://resend.com)
-- Navigate to [API Keys](https://resend.com/api-keys)
-- Create a new API key
-- Copy and paste it into your `.env.local` file
-
-4. Run the development server
-
-```bash
-npm run dev
-```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## 🏗️ Project Structure
-
-```
-portfolio-aj/
-├── app/
-│   ├── api/
-│   │   └── send-email/     # Resend email API route
-│   ├── layout.tsx          # Root layout with theme provider
-│   ├── page.tsx            # Main dashboard page
-│   ├── sitemap.ts          # XML sitemap generation
-│   └── globals.css         # Global styles with glassmorphism
-├── components/
-│   ├── hero-section.tsx    # Hero component with profile
-│   ├── structured-data.tsx # JSON-LD schemas
-│   ├── theme-provider.tsx  # Theme provider wrapper
-│   ├── theme-toggle.tsx    # Dark/light mode toggle
-│   ├── ui/                 # shadcn/ui components
-│   └── widgets/
-│       ├── about-widget.tsx
-│       ├── skills-widget.tsx
-│       ├── projects-widget.tsx
-│       ├── contact-widget.tsx
-│       └── schedule-widget.tsx
-├── public/
-│   ├── bg-mobile.jpg       # Background image
-│   ├── favicon/            # Favicon files
-│   ├── images/             # Project screenshots
-│   ├── photos/             # Profile photos
-│   └── robots.txt          # Crawler instructions
-└── lib/
-    └── utils.ts            # Utility functions
-```
-
-## 🎨 Customization
-
-### Update Content
-
-1. **Hero Section**: Edit `/components/hero-section.tsx` to update name, titles, and profile
-2. **About**: Modify `/components/widgets/about-widget.tsx` for your bio
-3. **Skills**: Update skills arrays in `/components/widgets/skills-widget.tsx`
-4. **Experience**: Edit experience data in `/components/widgets/experience-widget.tsx`
-5. **Projects**: Customize projects in `/components/widgets/projects-widget.tsx`
-6. **Contact**: Update social links in `/components/widgets/contact-widget.tsx`
-
-### Styling
-
-- Glassmorphism utilities are defined in `/app/globals.css`
-- Theme colors are managed via CSS variables (light/dark modes)
-- Responsive breakpoints follow Tailwind's default system
-
-### Background Image
-
-The site uses a static background image for fast loading and optimal performance.
-
-**To change the background:**
-
-1. Replace `/public/bg-mobile.jpg` with your desired image
-2. Recommended size: 1920x1080px or higher (landscape)
-3. Use JPG format for optimal file size/quality balance
-4. For portrait: 1080x1920px works well
-
-**Supported formats:** JPG, PNG, WebP
-
-**Image optimization tips:**
-
-- Use high-quality images (1920x1080px minimum)
-- JPG at 85-90% quality provides best balance
-- WebP format offers better compression
-- Next.js automatically optimizes images on build
-
-Note: Widget readability is maintained through glassmorphism effects regardless of background image.
-
-### Contact Form
-
-The contact form uses **Resend** for reliable email delivery:
-
-**Features:**
-
-- Form validation with visual feedback
-- Loading states and error handling
-- Success/error messages
-- Reply-to set to sender's email
-- Clean HTML and text email formats
-
-**Setup:**
-
-1. Sign up at [resend.com](https://resend.com)
-2. Get your API key from [resend.com/api-keys](https://resend.com/api-keys)
-3. Add `RESEND_API_KEY` to your `.env.local` file
-
-**Custom Domain (Optional):**
-
-By default, emails come from `onboarding@resend.dev`. To use your own domain:
-
-1. Add and verify your domain in Resend dashboard
-2. Update the `from` field in `/app/api/send-email/route.ts`:
-   ```typescript
-   from: 'Portfolio Contact <contact@yourdomain.com>',
-   ```
-
-**Rate Limits:**
-
-- Free tier: 100 emails/day, 3,000/month
-- Paid tier: Starting at $20/month for 50,000 emails
-
-### SEO Features
-
-The site includes comprehensive SEO optimization:
-
-**Metadata & Social Sharing:**
-
-- Open Graph tags for Facebook, LinkedIn, Slack
-- Twitter Card tags for rich previews on X/Twitter
-- Customizable meta descriptions and keywords
-- Custom OG image (1200x630px) configured
-
-**Structured Data (JSON-LD):**
-
-- Person schema with professional information
-- Website schema for site identification
-- Professional Service schema for tax/CFO services
-- Optimized for Google Knowledge Graph
-
-**Search Engine Optimization:**
-
-- XML sitemap (auto-generated at `/sitemap.xml`)
-- Robots.txt for crawler instructions
-- Canonical URLs and meta tags
-- Mobile-optimized and fast-loading
-
-**Setup:**
-
-1. Update domain in `app/layout.tsx` (line 17): `metadataBase: new URL("https://yourdomain.com")`
-2. Add Google verification code when deploying
-3. Test social cards: [Facebook Debugger](https://developers.facebook.com/tools/debug/), [Twitter Validator](https://cards-dev.twitter.com/validator)
-
-See `SEO_GUIDE.md` for detailed configuration and optimization tips.
-
-## 📝 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-
-## 🌐 Deployment
-
-This project is ready to deploy on:
-
-- **Vercel** (recommended for Next.js)
-- **Netlify**
-- **AWS Amplify**
-- Any platform supporting Next.js
-
-### Deploy to Vercel
-
-```bash
-npm install -g vercel
-vercel
-```
-
-**Important:** Don't forget to add your `RESEND_API_KEY` environment variable in your deployment platform:
-
-- **Vercel**: Settings → Environment Variables
-- **Netlify**: Site settings → Environment variables
-- **AWS Amplify**: Environment variables section
-
-## 📄 License
-
-MIT
-
-## 👤 Author
-
-**Austin Johnson**
-
-- Software Engineer
-- Enrolled Agent
-- Website: [austinjohnson.me](https://austinjohnson.me)
+</div>
 
 ---
 
-Built with ❤️ using Next.js and TypeScript
+## 🚀 About Me
+
+I'm a full-stack software engineer and entrepreneur with 20+ years building tech-forward solutions. I founded and scaled **HatcheryBrain**, an API-first AgTech platform that has powered **$50M+ in lifetime transactions** for sustainable agriculture. Previously, I built my first e-commerce company from the ground up, reaching $1.5M ARR and serving 50,000+ customers. I specialize in **API-first architecture**, **automation**, and building scalable systems that simplify complex business processes.
+
+Currently based in **Dallas, TX** 🌵 | Former digital nomad across Latin America 🌎
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+### Frontend
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Shadcn/ui](https://img.shields.io/badge/Shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+
+### Backend
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### AI & Developer Tools
+
+![Claude](https://img.shields.io/badge/Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
+### Cloud & DevOps
+
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+
+### APIs & Integrations
+
+![ShipStation](https://img.shields.io/badge/ShipStation-4A90E2?style=for-the-badge&logo=shipstation&logoColor=white)
+![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=for-the-badge&logo=shopify&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=AustonianAI&theme=tokyonight&hide_border=true)
+
+</div>
+
+<div align="center">
+
+![Austin's GitHub Stats](https://github-readme-stats.vercel.app/api?username=AustonianAI&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AustonianAI&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
+
+<div align="center">
+
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=AustonianAI&theme=tokyo-night&hide_border=true&area=true)
+
+</div>
+
+---
+
+## 💡 Featured Projects
+
+### 🐣 [HatcheryBrain](https://apiv2.hatcherybrain.com/documentation)
+
+API-first inventory management platform for sustainable agriculture. Plans hatchery production schedules and manages real-time inventory across wholesale and retail channels.
+
+**Tech:** `Nest.js` `PostgreSQL` `Heroku` `AWS` `ShipStation API` `RESTful API`
+
+---
+
+### 📦 [ShipStation Order Splitter](https://github.com/AustonianAI/shipstation-order-splitting)
+
+Custom Node.js application demonstrating automatic order splitting in ShipStation using webhooks and the ShipStation API.
+
+**Tech:** `Node.js` `Express` `ShipStation API` `Webhooks`
+
+[📺 YouTube Demo](https://www.youtube.com/watch?v=I-rpgSMXKuw)
+
+---
+
+### 📄 [Jsonify](https://github.com/AustonianAI/pdf-to-json)
+
+One of the earliest AI-powered tools for converting PDF documents into structured JSON data. Submitted to Foundation Capital AI Hackathon (2022).
+
+**Tech:** `OpenAI` `Next.js` `TypeScript` `Tailwind CSS` `LLMs`
+
+[🔗 Live Demo](https://jsonify.org)
+
+---
+
+### 📮 [USPS API Tools](https://github.com/AustonianAI/usps-api-tools)
+
+Python Flask CLI application for interacting with USPS APIs. Features package tracking, shipping zone calculations, and NDC lookups.
+
+**Tech:** `Python` `Flask` `CLI` `USPS API`
+
+---
+
+### 🛒 [ChickensForBackyards.com](https://chickensforbackyards.com)
+
+Modern headless Shopify app delivering a fully custom shopping experience powered by Shopify's GraphQL API.
+
+**Tech:** `Next.js` `TypeScript` `Tailwind CSS` `GraphQL` `Shopify` `Shadcn/ui`
+
+---
+
+### 🏈 [LoL Keepers](https://github.com/AustonianAI/lol-keepers)
+
+Fantasy football keeper analytics platform with sum-of-years' digits algorithm to evaluate keeper decisions and draft pick values.
+
+**Tech:** `Python` `Django` `Algorithms` `Analytics`
+
+[🔗 Live App](https://lol-keepers.vercel.app)
+
+---
+
+## 🤝 Connect With Me
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-AustonianAI-181717?style=for-the-badge&logo=github)](https://github.com/AustonianAI)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Austin_Johnson-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/austinai/)
+[![X (Twitter)](https://img.shields.io/badge/X-@AustinAI-000000?style=for-the-badge&logo=x)](https://x.com/AustinAI)
+[![Instagram](https://img.shields.io/badge/Instagram-@aj__builds__ai-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/aj_builds_ai/)
+
+</div>
+
+<div align="center">
+
+### 🌐 [Visit My Portfolio](https://austinjohnson.tech)
+
+</div>
+
+---
+
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=AustonianAI&color=3B82F6&style=for-the-badge)
+
+**"Entrepreneur, Technologist, and Relentless Simplifier"**
+
+</div>
